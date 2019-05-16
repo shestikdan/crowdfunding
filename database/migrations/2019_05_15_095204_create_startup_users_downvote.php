@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateStartupUsersUpvote extends Migration
+class CreateStartupUsersDownvote extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateStartupUsersUpvote extends Migration
      */
     public function up()
     {
-        Schema::create('startup_user_upvote', function (Blueprint $table) {
+        Schema::create('startup_user_downvote', function (Blueprint $table) {
             $table->integer('user_id')->unsigned()->nullable();
             $table->foreign('user_id')
                 ->references('id')
@@ -35,6 +35,6 @@ class CreateStartupUsersUpvote extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('startup_users_upvote');
+        Schema::dropIfExists('startup_users_downvote');
     }
 }

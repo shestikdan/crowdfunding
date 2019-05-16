@@ -5,7 +5,7 @@
         <button class="no"></button>
         <div class="tind">
             <div class="tind-wrapper1">
-                <img class="tind-project" :src="'/uploads/startup/logo/'+ startup.logo" alt="" width="410px" height="270px">
+                <img class="tind-project" :src="'/uploads/startup/logo/'+ startup.logo" alt="">
                 <div class="tind-info">
                     <div class="tind-info-inner">
                         <h1>{{ startup.title }}</h1>

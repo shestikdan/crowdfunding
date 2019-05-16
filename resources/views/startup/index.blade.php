@@ -83,6 +83,8 @@
     }
     .tind-project{
         width: 100%;
+        height: 12.5rem;
+        border-radius: 10px;
     }
     .tind-battery{
         background: url('/assets/img/battery.svg');
@@ -138,7 +140,7 @@
         background: url('/assets/img/yes.svg');
         position: absolute;
         right: 7rem;
-        top: 10rem;
+        top: 12rem;
         background-size: cover;
         border: none;
         width: 5rem;
@@ -162,7 +164,7 @@
         height: 5rem;
         z-index: 1;
         left: 7rem;
-        top: 10rem;
+        top: 12rem;
     }
     .no:hover{
         transform: scale(1.1);
@@ -170,14 +172,14 @@
     }
     .backleft{
         position: absolute;
-        top: 3rem;
+        top: 5rem;
         left: 8rem;
         height: 18rem;
         transition: .2s;
     }
     .backright{
         position: absolute;
-        top: 3rem;
+        top: 5rem;
         right: 8rem;
         height: 18rem;
         transition: .2s;
