@@ -1845,6 +1845,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -37934,12 +37938,7 @@ var render = function() {
       _c("div", { staticClass: "tind-wrapper1" }, [
         _c("img", {
           staticClass: "tind-project",
-          attrs: {
-            src: "/uploads/startup/logo/" + _vm.startup.logo,
-            alt: "",
-            width: "410px",
-            height: "270px"
-          }
+          attrs: { src: "/uploads/startup/logo/" + _vm.startup.logo, alt: "" }
         }),
         _vm._v(" "),
         _c("div", { staticClass: "tind-info" }, [
@@ -37954,21 +37953,33 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "tind-battery" }, [
-        _c("img", {
-          staticClass: "tind-battery-liquid",
-          attrs: { src: "/assets/img/liquid.svg", alt: "" }
-        }),
-        _vm._v(" "),
-        _c("div", { staticClass: "tind-battery-inner-text" }, [
-          _c("p", [_vm._v("Наша цель:")]),
+        _c("div", { staticClass: "innerr" }, [
+          _c("img", {
+            staticClass: "tind-battery-liquid",
+            attrs: { src: "/assets/img/liquid1.svg" }
+          }),
           _vm._v(" "),
-          _c("h1", [
-            _vm._v(_vm._s(_vm.formatMoney(_vm.startup.need_money)) + "$")
+          _c("img", {
+            staticClass: "tind-battery-liquid2",
+            attrs: { src: "/assets/img/liquid2.svg" }
+          }),
+          _vm._v(" "),
+          _c("img", {
+            staticClass: "tind-battery-liquid3",
+            attrs: { src: "/assets/img/liquid3.svg" }
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "tind-battery-inner-text" }, [
+            _c("p", [_vm._v("Наша цель:")]),
+            _vm._v(" "),
+            _c("h1", [
+              _vm._v(_vm._s(_vm.formatMoney(_vm.startup.need_money)) + "$")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("a", { staticClass: "tind-battery-button", attrs: { href: "" } }, [
+            _vm._v("\n                    Пополнить\n                ")
           ])
-        ]),
-        _vm._v(" "),
-        _c("a", { staticClass: "tind-battery-button", attrs: { href: "" } }, [
-          _vm._v("\n                Пополнить\n            ")
         ])
       ])
     ]),
@@ -50401,8 +50412,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/danilshestopalov/Desktop/crowdfunding/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/danilshestopalov/Desktop/crowdfunding/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Кроколюди\Desktop\eooeo\crowdfunding\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Кроколюди\Desktop\eooeo\crowdfunding\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

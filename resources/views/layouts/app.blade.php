@@ -10,6 +10,7 @@
     <title>OpenStudio</title>
 
     <!-- Scripts -->
+    <script src="{{ asset('js/svg.min.js') }}"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="https://widget.cloudpayments.kz/bundles/cloudpayments"></script>
     <!-- Fonts -->
@@ -29,6 +30,7 @@
 
         gtag('config', 'UA-135696908-1');
     </script>
+    
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -96,6 +98,18 @@
         </section>
     </footer>
 </div>
+<script>
+    var s = Snap("#svg");
+    var smallCircle = s.circle(100, 150, 70);
+    var discs = s.group(smallCircle, s.circle(200, 150, 70));
+    discs.attr({
+        fill: "#fff"
+    });
+    bigCircle.attr({
+        mask: discs
+    });
+    smallCircle.animate({r: 50}, 1000);
+</script>
 </body>
 </html>
 

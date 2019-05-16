@@ -18,14 +18,18 @@
                 </div>
             </div>
             <div class="tind-battery">
-                <img src="/assets/img/liquid.svg" alt="" class="tind-battery-liquid">
-                <div class="tind-battery-inner-text">
-                    <p>Наша цель:</p>
-                    <h1>{{ formatMoney(startup.need_money) }}$</h1>
+                <div class="innerr">
+                    <img class="tind-battery-liquid" src="/assets/img/liquid1.svg">
+                    <img class="tind-battery-liquid2" src="/assets/img/liquid2.svg">
+                    <img class="tind-battery-liquid3" src="/assets/img/liquid3.svg">
+                    <div class="tind-battery-inner-text">
+                        <p>Наша цель:</p>
+                        <h1>{{ formatMoney(startup.need_money) }}$</h1>
+                    </div>
+                    <a href="" class="tind-battery-button">
+                        Пополнить
+                    </a>
                 </div>
-                <a href="" class="tind-battery-button">
-                    Пополнить
-                </a>
             </div>
         </div>
         <button class="yes"></button>

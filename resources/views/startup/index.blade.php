@@ -9,6 +9,30 @@
         padding: 0;
         margin: 0;
     }
+    @keyframes popup {
+        0% {
+            transform: translateX(0px);
+        }
+        100% {
+            transform: translateX(-600px);
+        }
+    }
+    @keyframes popup2 {
+        0% {
+            transform: translateX(0px);
+        }
+        100% {
+            transform: translateX(-50px);
+        }
+    }
+    @keyframes popup3 {
+        0% {
+            transform: translateX(0px);
+        }
+        100% {
+            transform: translateX(-100px);
+        }
+    }
     img{
         max-width: 100%;
     }
@@ -19,7 +43,9 @@
     .tind{
         display: grid;
         grid-template-columns: 2fr 1fr;
-        background: #fff;
+        background: url(/assets/img/tind-bg.png);
+        background-size: 150% 150%;
+        background-position: -10rem -5rem;
         box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.35);
         border-radius: 25px;
         left: 10rem;
@@ -94,6 +120,12 @@
         padding: 1rem;
         display: grid;
     }
+    .innerr{
+        display: grid;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+    }
     .tind-battery-button{
         background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #23A4DD;
         border-radius: 5px;
@@ -106,27 +138,50 @@
         justify-items: center;
         align-items: center;
         height: 1rem;
-        margin: 0 1.2rem;
-        margin-top: 13rem;
-        width: 4rem;
-        z-index: 1;
+        margin: 0 1rem;
+        margin-top: 10rem;
+        width: 70%;
+        z-index: 5;
         position: absolute;
-        left: 21.66rem;
+        left: 0;
     }
     .tind-battery-liquid{
-        position: relative;
+        position: absolute;
         z-index: 1;
         align-self: end;
+        height: 20rem;
+        animation: popup 10s linear infinite alternate-reverse;
+        width: 40rem;
+        max-width: 30rem !important;
+        top: -2rem;
+    }
+    .tind-battery-liquid2{
+        position: absolute;
+        z-index: 2;
+        align-self: end;
+        animation: popup3 8s linear infinite alternate-reverse;
+        width: 30rem;
+        max-width: 30rem !important;
+        top: 2.5rem;
+    }
+    .tind-battery-liquid3{
+        position: absolute;
+        z-index: 3;
+        align-self: end;
+        animation: popup2 6s linear infinite alternate-reverse;
+        width: 8rem;
+        max-width: 30rem !important;
+        top: 2rem;
     }
     .tind-battery-inner-text{
         position: absolute;
         display: grid;
         justify-items: center;
-        width: 7.5rem;
-        margin-top: 7rem;
+        width: 100%;
+        margin-top: 5rem;
         color: #fff;
-        z-index: 1;
-        left: 21rem
+        z-index: 5;
+        left: 0;
     }
     .tind-battery-inner-text p{
         font-size: .5rem;
@@ -184,5 +239,4 @@
         height: 18rem;
         transition: .2s;
     }
-
 </style>
