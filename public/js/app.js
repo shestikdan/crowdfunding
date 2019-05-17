@@ -37977,9 +37977,14 @@ var render = function() {
             ])
           ]),
           _vm._v(" "),
-          _c("a", { staticClass: "tind-battery-button", attrs: { href: "" } }, [
-            _vm._v("\n                    Пополнить\n                ")
-          ])
+          _c(
+            "a",
+            {
+              staticClass: "tind-battery-button",
+              attrs: { href: "", id: "tind-b1" }
+            },
+            [_vm._v("\n                    Пополнить\n                ")]
+          )
         ])
       ])
     ]),

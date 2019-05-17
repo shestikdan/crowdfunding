@@ -98,18 +98,6 @@
         </section>
     </footer>
 </div>
-<script>
-    var s = Snap("#svg");
-    var smallCircle = s.circle(100, 150, 70);
-    var discs = s.group(smallCircle, s.circle(200, 150, 70));
-    discs.attr({
-        fill: "#fff"
-    });
-    bigCircle.attr({
-        mask: discs
-    });
-    smallCircle.animate({r: 50}, 1000);
-</script>
 </body>
 </html>
 

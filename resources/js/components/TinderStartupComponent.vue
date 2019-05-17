@@ -26,7 +26,7 @@
                         <p>Наша цель:</p>
                         <h1>{{ formatMoney(startup.need_money) }}$</h1>
                     </div>
-                    <a href="" class="tind-battery-button">
+                    <a href="" id="tind-b1" class="tind-battery-button">
                         Пополнить
                     </a>
                 </div>
