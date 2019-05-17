@@ -49,8 +49,8 @@
         box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.35);
         border-radius: 25px;
         left: 10rem;
-        top: 3rem;
-        position: relative;
+        top: 5rem;
+        position: absolute;
         width: 28rem;
         padding: 1rem;
         z-index: 3;
