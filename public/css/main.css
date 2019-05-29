@@ -20,6 +20,38 @@ header {
 min-height: 91.7vh;
 }
 
+.neobutt{
+    background: #A2C83A;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: .5rem;
+    text-decoration: none;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 1rem;
+    align-self: end;
+    width: 5rem;
+    z-index: 5;
+    left: 0;
+}
+
+.aboutproject{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    height: 8.5rem;
+    padding-top: 1rem;
+}
+
+.aboutproject-inner{
+    padding-left: 10%;
+    display: grid;
+    grid-template-rows: 2rem auto auto;
+}
+
 footer {
     clear: both;
     position: relative;
@@ -513,7 +545,7 @@ a {
     font-style: normal;
     font-weight: bold;
     /* font-size: 54px; */
-    font-size: 3.5rem;
+    font-size: 1.5rem;
     /* line-height: normal; */
     color: rgba(0, 0, 0, 0.65); }
 
@@ -554,8 +586,8 @@ a {
 .projectt .rightcol1 {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 45% 35% 20%;
-    grid-template-rows: 45% 35% 20%;
+    /* -ms-grid-rows: 45% 35% 20%; */
+    /* grid-template-rows: 45% 35% 20%; */
     padding: 5% 5% 5% 0; }
 
 .projectt .slideshow-container {
@@ -1662,7 +1694,7 @@ p{
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 3.5rem;
+    font-size: 1.5rem;
     color: rgba(0, 0, 0, 0.65); }
 
 .projectt p {
@@ -1705,14 +1737,15 @@ p{
     display: -ms-grid;
     display: grid;
     height: 100%;
-    -ms-grid-rows: 200px 70px auto;
-    grid-template-rows: 150px 70px auto; }
+    /* -ms-grid-rows: 200px 70px auto; */
+    /* grid-template-rows: 150px 70px auto;  */
+}
 
 .projectt .userinfo {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 2fr 1fr;
-    grid-template-columns: 1fr 2fr 1fr; }
+    -ms-grid-columns: 1fr 3fr;
+    grid-template-columns: 1fr 3fr; }
 
 .projectt .ava {
     width: 100%;
@@ -1950,10 +1983,10 @@ input{
     color: rgba(0, 0, 0, 0.65);
 }
 @media screen and (max-width: 1600px){
-    .projectt .nut h1 {
+    /* .projectt .nut h1 {
         font-size: 2.5rem; }
     .projectt .nut p {
-        font-size: 1rem; }
+        font-size: 1rem; } */
     header{
         padding: 0 10vw;
     }
@@ -2008,17 +2041,17 @@ input{
     .startup1 button{
         margin-top: 20px;
     }
-    .projectt .rightcol1 {
-        grid-template-rows: 120px 53px auto;}
+    /* .projectt .rightcol1 {
+        grid-template-rows: 120px 53px auto;} */
     .spectop {
         grid-template-columns: 18% 70% 10%;
     }
-    .projectt h1{
+    /* .projectt h1{
         font-size: 2.5rem;
     }
     .projectt .rightcol1 p{
         font-size: 1rem;
-    }
+    } */
     .slider{
         border-radius: 10px;
     }
@@ -2373,4 +2406,3 @@ color: rgba(0, 0, 0, 0.65);
         background-position: 51% 46%;
     }
 }
-
