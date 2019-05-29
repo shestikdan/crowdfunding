@@ -1849,10 +1849,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      startup: []
+      startup: [],
+      vote: 0
     };
   },
   mounted: function mounted() {
@@ -1864,20 +1868,41 @@ __webpack_require__.r(__webpack_exports__);
 
       axios.get('/api/startup').then(function (response) {
         _this.startup = response.data;
-        console.log(_this.startup);
+        _this.vote = _this.startup.likes;
       });
+      console.log(this.startup);
+    },
+    upvote: function upvote(id) {
+      var _this2 = this;
+
+      axios.post('/api/upvote/' + id).then(function (response) {
+        _this2.vote = response.data;
+        console.log(_this2.vote);
+        _this2.vote = _this2.vote.likes;
+      });
+      this.getStartup();
+    },
+    downvote: function downvote(id) {
+      var _this3 = this;
+
+      axios.post('/api/downvote/' + id).then(function (response) {
+        _this3.vote = response.data;
+        console.log(_this3.vote);
+        _this3.vote = _this3.vote.likes;
+      });
+      this.getStartup();
     },
     formatMoney: function formatMoney(need_money) {
       need_money = String(need_money);
       return need_money.replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ');
     },
     putLike: function putLike(id) {
-      var _this2 = this;
+      var _this4 = this;
 
       axios.post('/api/startup/' + id + '/like').then(function (response) {
-        for (var i = 0; i < _this2.startups.length; i++) {
-          if (_this2.startups[i]['id'] == id) {
-            _this2.startups[i]['likes'] = response.data;
+        for (var i = 0; i < _this4.startups.length; i++) {
+          if (_this4.startups[i]['id'] == id) {
+            _this4.startups[i]['likes'] = response.data;
           }
         }
       });
@@ -37932,7 +37957,14 @@ var render = function() {
       attrs: { src: "/assets/img/backright.png", alt: "" }
     }),
     _vm._v(" "),
-    _c("button", { staticClass: "no" }),
+    _c("button", {
+      staticClass: "no",
+      on: {
+        click: function($event) {
+          return _vm.downvote(_vm.startup.id)
+        }
+      }
+    }),
     _vm._v(" "),
     _c("div", { staticClass: "tind" }, [
       _c("div", { staticClass: "tind-wrapper1" }, [
@@ -37948,7 +37980,23 @@ var render = function() {
             _c("p", [_vm._v(_vm._s(_vm.startup.tagline))])
           ]),
           _vm._v(" "),
-          _vm._m(0)
+          _c("div", { staticClass: "tind-buttons" }, [
+            _c(
+              "a",
+              {
+                on: {
+                  click: function($event) {
+                    return _vm.upvote(_vm.startup.id)
+                  }
+                }
+              },
+              [_vm._v(_vm._s(_vm.vote))]
+            ),
+            _vm._v(" "),
+            _c("a", { attrs: { href: "/startup/" + _vm.startup.id } }, [
+              _vm._v("Podrobnee")
+            ])
+          ])
         ])
       ]),
       _vm._v(" "),
@@ -37989,21 +38037,17 @@ var render = function() {
       ])
     ]),
     _vm._v(" "),
-    _c("button", { staticClass: "yes" })
+    _c("button", {
+      staticClass: "yes",
+      on: {
+        click: function($event) {
+          return _vm.upvote(_vm.startup.id)
+        }
+      }
+    })
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "tind-buttons" }, [
-      _c("a", { attrs: { href: "" } }, [_vm._v("Upvote")]),
-      _vm._v(" "),
-      _c("a", { attrs: { href: "" } }, [_vm._v("Podrobnee")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

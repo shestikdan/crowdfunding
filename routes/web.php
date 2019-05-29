@@ -1,7 +1,7 @@
 <?php
 
+Route::get('/', 'StartupController@index')->name('startup.index');
 Route::group(['middleware' => 'auth'], function() {
-    Route::get('/', 'StartupController@index')->name('startup.index');
     Route::group(['prefix' => '/startup'], function () {
         Route::get('/create', 'StartupController@create')->name('startup.create');
         Route::post('/', 'StartupController@store')->name('startup.store');
@@ -17,6 +17,8 @@ Route::group(['prefix' => 'auth'], function () {
 
 Route::group(['prefix' => 'api'], function (){
     Route::get('/startup', 'StartupController@getStartup');
+    Route::post('/upvote/{id}', 'StartupController@upvote');
+    Route::post('/downvote/{id}', 'StartupController@downvote');
 });
 
 Auth::routes();
